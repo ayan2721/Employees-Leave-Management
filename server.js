@@ -24,7 +24,9 @@ app.use('/api/leave', leaveRoutes);
 
 // Error handling middleware
 app.use(errorHandler);
-
+app.get("/", (req, res) => {
+    res.send("Employees Leave Management Backend Running");
+});
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
